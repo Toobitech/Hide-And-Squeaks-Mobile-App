@@ -1,0 +1,58 @@
+<x-default-layout>
+
+    @section('title')
+        Product Management
+    @endsection
+
+    @section('breadcrumbs')
+        {{ Breadcrumbs::render('product.index') }}
+    @endsection
+
+    <div class="card">
+        <!--begin::Card header-->
+        <div class="card-header border-0 pt-6">
+            {{-- <!--begin::Card title-->
+            <div class="card-title">
+                <!--begin::Search-->
+                <div class="d-flex align-items-center position-relative my-1">
+                    {!! getIcon('magnifier', 'fs-3 position-absolute ms-5') !!}
+                    <input type="text" data-kt-user-table-filter="search"
+                        class="form-control form-control-solid w-250px ps-13" placeholder="Search user"
+                        id="mySearchInput" />
+                </div>
+                <!--end::Search-->
+            </div>
+            <!--begin::Card title-->
+
+            <!--begin::Card toolbar-->
+            <div class="card-toolbar">
+                <!--begin::Toolbar-->
+                <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
+                    <!--begin::Add user-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#kt_modal_add_user">
+                        {!! getIcon('plus', 'fs-2', '', 'i') !!}
+                        Add User
+                    </button>
+                    <!--end::Add user-->
+                </div>
+                <!--end::Toolbar-->
+
+                <!--begin::Modal-->
+                <livewire:user.add-user-modal></livewire:user.add-user-modal>
+                <!--end::Modal-->
+            </div>
+            <!--end::Card toolbar--> --}}
+
+
+
+        </div>
+        <!--end::Card header-->
+
+    </div>
+    @include('partials.widgets.lists._widget-7')
+    @include('partials.widgets.lists._widget-8')
+    @include('partials.widgets.lists._widget-9')
+    @include('partials.widgets.lists._widget-26')
+
+</x-default-layout>
